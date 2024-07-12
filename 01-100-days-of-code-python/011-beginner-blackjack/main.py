@@ -54,6 +54,11 @@ def print_final_result(player_cards, computer_cards):
         print("\n You win! Opponent went over. 😁\n")
         return
 
+    # I don't know if blackjack wins against 3 or more cards with 21 score and don't care
+    if player_score == compute_score:
+        print("\n Draw 🙃\n")
+        return
+
     # blackjack player
     if player_score == 21 and len(player_cards) == 2:
         print("\n Win, you have Blackjack 😱")
@@ -70,10 +75,6 @@ def print_final_result(player_cards, computer_cards):
 
     if player_score > compute_score:
         print("\n You win 😃\n")
-        return
-
-    if player_score == compute_score:
-        print("\n Draw 🙃\n")
 
 
 def blackjack():
