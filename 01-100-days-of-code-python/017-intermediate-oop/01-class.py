@@ -3,7 +3,7 @@ def function():
     pass  # TODO: add code later
 
 
-# Create empty class
+# Create empty class (all class name must be in PascalCase)
 class Userr:
     pass  # TODO: add code later
 
