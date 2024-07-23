@@ -2,6 +2,7 @@
 # Create a copy of Damien Hirst's Cupric Nitrate painting with turtle
 # Damien Hirst (Cupric Nitrate): https://www.phillips.com/detail/damien-hirst/UK010124/28
 # Turtle documentation: https://docs.python.org/3/library/turtle.html
+
 import turtle
 from turtle import Turtle, Screen
 import random
@@ -30,11 +31,11 @@ turtle.colormode(255)
 mOnPicassJofn = Turtle()
 mOnPicassJofn.speed("fastest")
 mOnPicassJofn.hideturtle()
+mOnPicassJofn.penup()
 mOnPicassJofn.teleport(-250, -250)
 
 for dot in range(1, 51):
     mOnPicassJofn.dot(20, random.choice(PALETTE))
-    mOnPicassJofn.penup()
     if dot % 10 != 0:
         mOnPicassJofn.forward(50)
     else:
