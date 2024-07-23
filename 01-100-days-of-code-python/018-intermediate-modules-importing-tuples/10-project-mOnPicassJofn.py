@@ -1,6 +1,10 @@
 # Project mOnPicassJofn
-# Create a copy of Damien Horst's dot painting with turtle
+# Create a copy of Damien Hirst's Cupric Nitrate painting with turtle
+# Damien Hirst (Cupric Nitrate): https://www.phillips.com/detail/damien-hirst/UK010124/28
 # Turtle documentation: https://docs.python.org/3/library/turtle.html
+import turtle
+from turtle import Turtle, Screen
+import random
 
 PALETTE = [
     (207, 160, 83),
@@ -20,3 +24,32 @@ PALETTE = [
     (84, 123, 180),
     (59, 39, 31),
 ]
+
+turtle.colormode(255)
+
+mOnPicassJofn = Turtle()
+mOnPicassJofn.speed("fastest")
+mOnPicassJofn.hideturtle()
+mOnPicassJofn.teleport(-250, -250)
+
+for dot in range(1, 51):
+    mOnPicassJofn.dot(20, random.choice(PALETTE))
+    mOnPicassJofn.penup()
+    if dot % 10 != 0:
+        mOnPicassJofn.forward(50)
+    else:
+        mOnPicassJofn.left(90)
+        mOnPicassJofn.forward(50)
+        mOnPicassJofn.left(90)
+        for x in range(9):
+            mOnPicassJofn.dot(20, random.choice(PALETTE))
+            mOnPicassJofn.forward(50)
+        mOnPicassJofn.dot(20, random.choice(PALETTE))
+        if dot < 41:
+            mOnPicassJofn.right(90)
+            mOnPicassJofn.forward(50)
+            mOnPicassJofn.right(90)
+
+
+screen = Screen()
+screen.exitonclick()
