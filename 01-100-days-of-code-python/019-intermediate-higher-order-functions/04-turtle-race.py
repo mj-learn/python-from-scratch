@@ -11,10 +11,9 @@ def create_turtle(x, y, color):
 
 
 is_race_on = False
-colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+colors = ["red", "orange", "pink", "green", "blue", "purple"]
 y_positions = [-70, -40, -10, 20, 50, 80]
 all_turtles = []
-winning_color = ""
 
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -23,7 +22,7 @@ user_bet = ""
 while user_bet not in colors:
     user_bet = screen.textinput(
         title="Make your bet",
-        prompt="Which turtle will win the race?\n[red, orange, yellow, greeen, blue, purple]\nEnter a color: ",
+        prompt="Which turtle will win the race?\n[red, orange, pink, green, blue, purple]\nEnter a color: ",
     )
 
 for racer in range(0, 6):
