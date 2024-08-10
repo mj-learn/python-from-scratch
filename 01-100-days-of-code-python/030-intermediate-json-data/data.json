@@ -1,0 +1,10 @@
+{
+    "John": {
+        "age": 30,
+        "city": "New York"
+    },
+    "Guido": {
+        "age": 68,
+        "city": "Amsterdam"
+    }
+}
